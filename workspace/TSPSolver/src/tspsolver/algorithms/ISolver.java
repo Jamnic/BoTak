@@ -1,16 +1,21 @@
 package tspsolver.algorithms;
 
-import java.util.Properties;
-
 public interface ISolver {
 	
 	/**
 	 * 
-	 * @param distances
-	 * @return
+	 * Each call returns result of next Iteration of the algorithm.
 	 * 
-	 * take distances between points return the array of point indexes in optimized order
 	 */
-	public int[] solve(double[][] distances, Properties properties);
+	
+	public IterationResult nextIteration();
+	
+	
+	/**
+	 * used to set algorithm properties, should be called before calling nextIteration()
+	 * @param properties
+	 */
+
+	
 
 }
